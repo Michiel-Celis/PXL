@@ -1,5 +1,28 @@
 # C# Essentials
 ## Table of Contents
+<Summary>Short Table</Summary>
+<details>
+
+- [C# Essentials](#c-essentials)
+	- [Table of Contents](#table-of-contents)
+	- [Data Types](#data-types)
+	- [Operators](#operators)
+	- [Control Flow](#control-flow)
+	- [Naming Conventions](#naming-conventions)
+	- [Often used methods](#often-used-methods)
+	- [Methods and Parameters](#methods-and-parameters)
+	- [Data Grouping](#data-grouping)
+- [WPF Essentials](#wpf-essentials)
+	- [Event Procedures](#event-procedures)
+	- [Event Types](#event-types)
+	- [WPF Elements](#wpf-elements)
+	- [WPF Panels](#wpf-panels)
+
+</details>
+
+<Summary>Full Table</Summary>
+<details>
+
 - [C# Essentials](#c-essentials)
 	- [Table of Contents](#table-of-contents)
 	- [Data Types](#data-types)
@@ -161,19 +184,17 @@
 		- [Abstract Classes](#abstract-classes)
 		- [Interfaces](#interfaces)
 		- [Extension Methods](#extension-methods)
-	- [Generics](#generics)
+		- [Generics](#generics)
 		- [Delegates](#delegates)
 		- [Events](#events)
 		- [Lambda Expressions](#lambda-expressions)
 - [WPF Essentials](#wpf-essentials)
-	- [Summary](#summary)
 	- [Event Procedures](#event-procedures)
 		- [Xaml handler + code-behind](#xaml-handler--code-behind)
 		- [Code-behind-only handler](#code-behind-only-handler)
 	- [Event Types](#event-types)
 		- [Click Events](#click-events)
 		- [Key Events](#key-events)
-- [WPF Essentials](#wpf-essentials-1)
 	- [WPF Elements](#wpf-elements)
 		- [Image](#image)
 		- [TextBlock](#textblock)
@@ -193,35 +214,8 @@
 		- [WrapPanel](#wrappanel)
 		- [DockPanel](#dockpanel)
 		- [Viewbox](#viewbox)
-- [WPF Essentials](#wpf-essentials)
-  * [Summary](#summary)
-  * [Event Procedures](#event-procedures)
-	+ [Xaml handler + code-behind](#xaml-handler---code-behind)
-	+ [Code-behind-only handler](#code-behind-only-handler)
-  * [Event Types](#event-types)
-	+ [Click Events](#click-events)
-	+ [Key Events](#key-events)
-- [WPF Essentials](#wpf-essentials-1)
-  * [WPF Elements](#wpf-elements)
-	+ [Image](#image)
-	+ [TextBlock](#textblock)
-	+ [TextBox](#textbox)
-	+ [Button](#button)
-	+ [CheckBox](#checkbox)
-	+ [RadioButton](#radiobutton)
-	+ [ListBox](#listbox)
-	+ [ComboBox](#combobox)
-	+ [ProgressBar](#progressbar)
-	+ [Slider](#slider)
-	+ [ScrollViewer](#scrollviewer)
-  * [WPF Panels](#wpf-panels)
-	+ [Grid](#grid)
-	+ [Canvas](#canvas)
-	+ [StackPanel](#stackpanel)
-	+ [WrapPanel](#wrappanel)
-	+ [DockPanel](#dockpanel)
-	+ [Viewbox](#viewbox)
-
+  
+</details>
 
 ## Data Types
 - Used to store data by referencing a value in memory
@@ -1596,7 +1590,7 @@ static class StringExtensions
 string str = "hello world";
 string str2 = str.ToTitleCase(); // Hello World
 ```
-## Generics
+### Generics
 - Generic = a class or method that can work with any data type
 - Generics are declared using angle brackets
 ```csharp
@@ -1719,8 +1713,6 @@ IEnumerable<int> numbers2 = from number in numbers
 ```
 
 # WPF Essentials
-## Summary
-
 ## Event Procedures
 - Event procedure = method that is called when an event occurs
 - Event handlers _can_ but **don't need to be** declared in the XAML file
@@ -1824,7 +1816,6 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Shift
 e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 ``` 
 
-# WPF Essentials
 ## WPF Elements
 ### Image
 <details>
