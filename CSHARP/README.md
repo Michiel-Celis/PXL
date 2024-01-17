@@ -3,7 +3,6 @@
 ### Short Table
 
 - [C# Essentials](#c-essentials)
-	- [Table of Contents](#table-of-contents)
 	- [Data Types](#data-types)
 	- [Operators](#operators)
 	- [Control Flow](#control-flow)
