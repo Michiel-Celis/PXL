@@ -17,7 +17,7 @@
 	- [WPF Elements](#wpf-elements)
 	- [WPF Panels](#wpf-panels)
 
-<Summary>Full Table</Summary>
+<Summary>Expand Full Table</Summary>
 <details>
 
 - [C# Essentials](#c-essentials)
@@ -1159,6 +1159,8 @@ int[] numbers = new int[3]; // { 0, 0, 0 }
 int[] numbers = new int[3] { 1, 2, 3 }; // { 1, 2, 3 }
 ```
 #### Array Methods
+<details>
+
 ##### Length
 > Returns the number of elements in the array
 ```csharp
@@ -1208,6 +1210,7 @@ Array.Resize(ref numbers, 5); // { 1, 2, 3, 0, 0 }
 int[] numbers = new int[3] { 1, 2, 3 };
 List<int> numbers2 = numbers.ToList(); // { 1, 2, 3 }
 ```
+</details>
 
 ### Multidimensional Arrays
 - Multidimensional arrays are declared using multiple square brackets
@@ -1247,6 +1250,8 @@ List<int> numbers = new List<int>(); // { }
 List<int> numbers = new List<int>() { 1, 2, 3 }; // { 1, 2, 3 }
 ```
 #### List Methods
+<details>
+
 ##### Add
 > Adds an object to the end of the List
 ```csharp
@@ -1326,6 +1331,8 @@ int[] numbers2 = numbers.ToArray(); // { 1, 2, 3 }
 List<int> numbers = new List<int>() { 1, 2, 3 };
 List<int> numbers2 = numbers.ToList(); // { 1, 2, 3 }
 ```
+</details>
+
 ### Dictionaries 💚
 - Dictionary = a collection of key-value pairs
 - Dictionaries are zero-based
@@ -1340,6 +1347,8 @@ Dictionary<string, int> numbers = new Dictionary<string, int>(); // { }
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } }; // { { "one", 1 }, { "two", 2 }, { "three", 3 } }
 ```
 #### Dictionary Methods
+<details>
+
 ##### Add
 > Adds an element with the specified key and value into the Dictionary
 ```csharp
@@ -1389,6 +1398,9 @@ ICollection<string> keys = numbers.Keys; // { "one", "two", "three" }
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 ICollection<int> values = numbers.Values; // { 1, 2, 3 }
 ```
+
+</details>
+
 ### Enumerations
 - Enumeration = a set of named constants
 - Enumerations are declared using the enum keyword
@@ -1401,6 +1413,9 @@ enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
 enum Days { Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6, Sunday = 7 }
 ```
 #### Enumeration Methods
+
+<details>
+
 ##### GetNames
 > Retrieves an array of the names of the constants in a specified enumeration
 ```csharp
@@ -1422,6 +1437,9 @@ Days day = (Days)Enum.Parse(typeof(Days), "Monday"); // Monday
 Days day;
 bool success = Enum.TryParse("Monday", out day); // true
 ```
+
+</details>
+
 ### Structs
 - Struct = a data type that can contain data members and function members
 - Structs are declared using the struct keyword
