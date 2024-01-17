@@ -1,7 +1,9 @@
 # C# Essentials
 ## Summary
+### Table of Contents
 - [C# Essentials](#c-essentials)
 	- [Summary](#summary)
+		- [Table of Contents](#table-of-contents)
 	- [Data Types](#data-types)
 		- [Variables](#variables)
 		- [Constants](#constants)
@@ -108,63 +110,63 @@
 		- [Function procedure](#function-procedure)
 		- [Event procedure](#event-procedure)
 		- [Method overloading](#method-overloading)
-- [Data Grouping](#data-grouping)
-	- [Arrays 💚](#arrays-)
-		- [Array Methods](#array-methods)
-			- [Length](#length-1)
-			- [IndexOf](#indexof-2)
-			- [Sort](#sort)
-			- [Reverse](#reverse)
-			- [Clear](#clear)
-			- [Copy](#copy)
-			- [Resize](#resize)
-			- [ToList](#tolist)
+	- [Data Grouping](#data-grouping)
+		- [Arrays 💚](#arrays-)
+			- [Array Methods](#array-methods)
+				- [Length](#length-1)
+				- [IndexOf](#indexof-2)
+				- [Sort](#sort)
+				- [Reverse](#reverse)
+				- [Clear](#clear)
+				- [Copy](#copy)
+				- [Resize](#resize)
+				- [ToList](#tolist)
 		- [Multidimensional Arrays](#multidimensional-arrays)
 		- [Jagged Arrays](#jagged-arrays)
-	- [Lists 💚](#lists-)
-		- [List Methods](#list-methods)
-			- [Add](#add)
-			- [AddRange](#addrange)
-			- [Insert](#insert-2)
-			- [Remove](#remove-2)
-			- [RemoveAt](#removeat)
-			- [RemoveRange](#removerange)
-			- [Clear](#clear-1)
-			- [Contains](#contains-1)
-			- [IndexOf](#indexof-3)
-			- [Sort](#sort-1)
-			- [Reverse](#reverse-1)
-			- [ToArray](#toarray)
-			- [ToList](#tolist-1)
-	- [Dictionaries 💚](#dictionaries-)
-		- [Dictionary Methods](#dictionary-methods)
-			- [Add](#add-1)
-			- [Remove](#remove-3)
-			- [Clear](#clear-2)
-			- [ContainsKey](#containskey)
-			- [ContainsValue](#containsvalue)
-			- [TryGetValue](#trygetvalue)
-			- [Keys](#keys)
-			- [Values](#values)
-	- [Enumerations](#enumerations)
-		- [Enumeration Methods](#enumeration-methods)
-			- [GetNames](#getnames)
-			- [GetValues](#getvalues)
-			- [Parse](#parse-1)
-			- [TryParse](#tryparse-1)
-	- [Structs](#structs)
-	- [Classes](#classes)
-		- [Properties](#properties)
-	- [Constructors](#constructors)
-	- [Inheritance](#inheritance)
-	- [Polymorphism](#polymorphism)
-	- [Abstract Classes](#abstract-classes)
-	- [Interfaces](#interfaces)
-	- [Extension Methods](#extension-methods)
+		- [Lists 💚](#lists-)
+			- [List Methods](#list-methods)
+				- [Add](#add)
+				- [AddRange](#addrange)
+				- [Insert](#insert-2)
+				- [Remove](#remove-2)
+				- [RemoveAt](#removeat)
+				- [RemoveRange](#removerange)
+				- [Clear](#clear-1)
+				- [Contains](#contains-1)
+				- [IndexOf](#indexof-3)
+				- [Sort](#sort-1)
+				- [Reverse](#reverse-1)
+				- [ToArray](#toarray)
+				- [ToList](#tolist-1)
+		- [Dictionaries 💚](#dictionaries-)
+			- [Dictionary Methods](#dictionary-methods)
+				- [Add](#add-1)
+				- [Remove](#remove-3)
+				- [Clear](#clear-2)
+				- [ContainsKey](#containskey)
+				- [ContainsValue](#containsvalue)
+				- [TryGetValue](#trygetvalue)
+				- [Keys](#keys)
+				- [Values](#values)
+		- [Enumerations](#enumerations)
+			- [Enumeration Methods](#enumeration-methods)
+				- [GetNames](#getnames)
+				- [GetValues](#getvalues)
+				- [Parse](#parse-1)
+				- [TryParse](#tryparse-1)
+		- [Structs](#structs)
+		- [Classes](#classes)
+			- [Properties](#properties)
+		- [Constructors](#constructors)
+		- [Inheritance](#inheritance)
+		- [Polymorphism](#polymorphism)
+		- [Abstract Classes](#abstract-classes)
+		- [Interfaces](#interfaces)
+		- [Extension Methods](#extension-methods)
 	- [Generics](#generics)
-	- [Delegates](#delegates)
-	- [Events](#events)
-	- [Lambda Expressions](#lambda-expressions)
+		- [Delegates](#delegates)
+		- [Events](#events)
+		- [Lambda Expressions](#lambda-expressions)
 - [WPF Essentials](#wpf-essentials)
 	- [Summary](#summary-1)
 	- [Event Procedures](#event-procedures)
@@ -1124,8 +1126,8 @@ public int Add(double a, double b)
 } double
 ```
 
-# Data Grouping
-## Arrays 💚
+## Data Grouping
+### Arrays 💚
 - Array = a collection of variables of the same type
 - Arrays are zero-based
 - Arrays have a fixed size
@@ -1138,51 +1140,51 @@ int[] numbers = new int[3]; // { 0, 0, 0 }
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 }; // { 1, 2, 3 }
 ```
-### Array Methods
-#### Length
+#### Array Methods
+##### Length
 > Returns the number of elements in the array
 ```csharp
 int[] numbers = new int[3];
 int length = numbers.Length; // 3
 ```
-#### IndexOf
+##### IndexOf
 > Returns the index of the first occurrence of the specified value in the array
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 };
 int index = Array.IndexOf(numbers, 2); // 1
 ```
-#### Sort
+##### Sort
 > Sorts the elements in the array
 ```csharp
 int[] numbers = new int[3] { 3, 2, 1 };
 Array.Sort(numbers); // { 1, 2, 3 }
 ```
-#### Reverse
+##### Reverse
 > Reverses the order of the elements in the array
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 };
 Array.Reverse(numbers); // { 3, 2, 1 }
 ```
-#### Clear
+##### Clear
 > Sets a range of elements in the array to zero, false, or null
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 };
 Array.Clear(numbers, 0, 3); // { 0, 0, 0 }
 ```
-#### Copy
+##### Copy
 > Copies a range of elements from an array starting at the specified source index and pastes them to another array starting at the specified destination index
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 };
 int[] numbers2 = new int[3];
 Array.Copy(numbers, numbers2, 3); // { 1, 2, 3 }
 ```
-#### Resize
+##### Resize
 > Changes the number of elements of a one-dimensional array to the specified new size
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 };
 Array.Resize(ref numbers, 5); // { 1, 2, 3, 0, 0 }
 ```
-#### ToList
+##### ToList
 > Copies the elements of the array to a new List
 ```csharp
 int[] numbers = new int[3] { 1, 2, 3 };
@@ -1213,7 +1215,7 @@ int[][] numbers = new int[2][]
 	new int[3] { 4, 5, 6 }
 };
 ```
-## Lists 💚
+### Lists 💚
 - List = a collection of variables of the same type
 - Lists are zero-based
 - Lists have a **dynamic size**
@@ -1226,87 +1228,87 @@ List<int> numbers = new List<int>(); // { }
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 }; // { 1, 2, 3 }
 ```
-### List Methods
-#### Add
+#### List Methods
+##### Add
 > Adds an object to the end of the List
 ```csharp
 List<int> numbers = new List<int>();
 numbers.Add(1); // { 1 }
 ```
-#### AddRange
+##### AddRange
 > Adds the elements of the specified collection to the end of the List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.AddRange(new int[] { 4, 5, 6 }); // { 1, 2, 3, 4, 5, 6 }
 ```
-#### Insert
+##### Insert
 > Inserts an element into the List at the specified index
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.Insert(0, 4); // { 4, 1, 2, 3 }
 ```
-#### Remove
+##### Remove
 > Removes the first occurrence of a specific object from the List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.Remove(2); // { 1, 3 }
 ```
-#### RemoveAt
+##### RemoveAt
 > Removes the element at the specified index of the List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.RemoveAt(0); // { 2, 3 }
 ```
-#### RemoveRange
+##### RemoveRange
 > Removes a range of elements from the List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.RemoveRange(0, 2); // { 3 }
 ```
-#### Clear
+##### Clear
 > Removes all elements from the List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.Clear(); // { }
 ```
-#### Contains
+##### Contains
 > Determines whether an element is in the List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 bool contains = numbers.Contains(2); // true
 ```
-#### IndexOf
+##### IndexOf
 > Searches for the specified object and returns the zero-based index of the first occurrence within the entire List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 int index = numbers.IndexOf(2); // 1
 ```
-#### Sort
+##### Sort
 > Sorts the elements in the entire List
 	
 ```csharp
 List<int> numbers = new List<int>() { 3, 2, 1 };
 numbers.Sort(); // { 1, 2, 3 }
 ```
-#### Reverse
+##### Reverse
 > Reverses the order of the elements in the entire List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 numbers.Reverse(); // { 3, 2, 1 }
 ```
-#### ToArray
+##### ToArray
 > Copies the elements of the List to a new array
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 int[] numbers2 = numbers.ToArray(); // { 1, 2, 3 }
 ```
-#### ToList
+##### ToList
 > Copies the elements of the List to a new List
 ```csharp
 List<int> numbers = new List<int>() { 1, 2, 3 };
 List<int> numbers2 = numbers.ToList(); // { 1, 2, 3 }
 ```
-## Dictionaries 💚
+### Dictionaries 💚
 - Dictionary = a collection of key-value pairs
 - Dictionaries are zero-based
 - Dictionaries have a dynamic size
@@ -1319,57 +1321,57 @@ Dictionary<string, int> numbers = new Dictionary<string, int>(); // { }
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } }; // { { "one", 1 }, { "two", 2 }, { "three", 3 } }
 ```
-### Dictionary Methods
-#### Add
+#### Dictionary Methods
+##### Add
 > Adds an element with the specified key and value into the Dictionary
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>();
 numbers.Add("one", 1); // { { "one", 1 } }
 ```
-#### Remove
+##### Remove
 > Removes the element with the specified key from the Dictionary
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 numbers.Remove("two"); // { { "one", 1 }, { "three", 3 } }
 ```
-#### Clear
+##### Clear
 > Removes all elements from the Dictionary
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 numbers.Clear(); // { }
 ```
-#### ContainsKey
+##### ContainsKey
 > Determines whether the Dictionary contains the specified key
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 bool containsKey = numbers.ContainsKey("two"); // true
 ```
-#### ContainsValue
+##### ContainsValue
 > Determines whether the Dictionary contains the specified value
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 bool containsValue = numbers.ContainsValue(2); // true
 ```
-#### TryGetValue
+##### TryGetValue
 > Gets the value associated with the specified key
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 int value;
 bool success = numbers.TryGetValue("two", out value); // true
 ```
-#### Keys
+##### Keys
 > Gets a collection containing the keys in the Dictionary
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 ICollection<string> keys = numbers.Keys; // { "one", "two", "three" }
 ```
-#### Values
+##### Values
 > Gets a collection containing the values in the Dictionary
 ```csharp
 Dictionary<string, int> numbers = new Dictionary<string, int>() { { "one", 1 }, { "two", 2 }, { "three", 3 } };
 ICollection<int> values = numbers.Values; // { 1, 2, 3 }
 ```
-## Enumerations
+### Enumerations
 - Enumeration = a set of named constants
 - Enumerations are declared using the enum keyword
 - Enumerations are declared using Pascal Case
@@ -1380,29 +1382,29 @@ enum Days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
 ```csharp
 enum Days { Monday = 1, Tuesday = 2, Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6, Sunday = 7 }
 ```
-### Enumeration Methods
-#### GetNames
+#### Enumeration Methods
+##### GetNames
 > Retrieves an array of the names of the constants in a specified enumeration
 ```csharp
 string[] days = Enum.GetNames(typeof(Days)); // { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" }
 ```
-#### GetValues
+##### GetValues
 > Retrieves an array of the values of the constants in a specified enumeration
 ```csharp
 int[] days = (int[])Enum.GetValues(typeof(Days)); // { 1, 2, 3, 4, 5, 6, 7 }
 ```
-#### Parse
+##### Parse
 > Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object
 ```csharp
 Days day = (Days)Enum.Parse(typeof(Days), "Monday"); // Monday
 ```
-#### TryParse
+##### TryParse
 > Converts the string representation of the name or numeric value of one or more enumerated constants to an equivalent enumerated object
 ```csharp
 Days day;
 bool success = Enum.TryParse("Monday", out day); // true
 ```
-## Structs
+### Structs
 - Struct = a data type that can contain data members and function members
 - Structs are declared using the struct keyword
 - Structs are declared using Pascal Case
@@ -1419,7 +1421,7 @@ Person person;
 person.Name = "John";
 person.Age = 18;
 ```
-## Classes
+### Classes
 - Class = a data type that can contain data members and function members
 - Classes are declared using the class keyword
 - Classes are declared using Pascal Case
@@ -1436,7 +1438,7 @@ Person person = new Person();
 person.Name = "John";
 person.Age = 18;
 ```
-### Properties
+#### Properties
 - Property = a member that provides a flexible mechanism to read, write, or compute the value of a private field
 - Properties are declared using Pascal Case
 - Properties are declared using curly braces
@@ -1455,7 +1457,7 @@ class Person
 Person person = new Person();
 person.Name = "John";
 ```
-## Constructors
+### Constructors
 - Constructor = a method that is called when an object is created
 - Constructors are declared using the same name as the class
 - Constructors are declared using Pascal Case
@@ -1476,7 +1478,7 @@ class Person
 ```csharp
 Person person = new Person("John", 18);
 ```
-## Inheritance
+### Inheritance
 - Inheritance = a mechanism in which one class acquires the properties and methods of another class
 - Inheritance is declared using the : symbol
 ```csharp
@@ -1496,7 +1498,7 @@ student.Name = "John";
 student.Age = 18;
 student.StudentNumber = 123456;
 ```
-## Polymorphism
+### Polymorphism
 - Polymorphism = a mechanism in which a subclass can override a method of its superclass
 - Polymorphism is declared using the virtual and override keywords
 ```csharp
@@ -1521,7 +1523,7 @@ person.Write(); // Person
 Student student = new Student();
 student.Write(); // Student
 ```
-## Abstract Classes
+### Abstract Classes
 - Abstract class = a class that cannot be instantiated
 - Abstract classes are declared using the abstract keyword
 - Abstract classes are declared using the same syntax as classes
@@ -1532,7 +1534,7 @@ abstract class Person
 	public int Age;
 }
 ```
-## Interfaces
+### Interfaces
 - Interface = a contract that specifies the members that a class must implement
 - Interfaces are declared using the interface keyword
 - Interfaces are declared using Pascal Case
@@ -1551,7 +1553,7 @@ class Person : IPerson
 	public int Age { get; set; }
 }
 ```
-## Extension Methods
+### Extension Methods
 - Extension method = a method that adds functionality to an existing type
 - Extension methods are declared using the static keyword
 - Extension methods are declared using the this keyword
@@ -1583,7 +1585,7 @@ Person<string> person = new Person<string>();
 person.Name = "John";
 person.Age = "18";
 ```
-## Delegates
+### Delegates
 - Delegate = a type that represents references to methods with a particular parameter list and return type
 - Delegates are declared using the delegate keyword
 - Delegates are declared using Pascal Case
@@ -1608,7 +1610,7 @@ Person person = new Person();
 WriteDelegate writeDelegate = person.Write;
 writeDelegate("Hello World"); // Hello World
 ```
-## Events
+### Events
 - Event = a mechanism that enables a class or object to notify other classes or objects when something of interest occurs
 - Events are declared using the event keyword
 - Events are declared using Pascal Case
@@ -1638,7 +1640,7 @@ private void Person_WriteEvent(object sender, EventArgs e)
 	Console.WriteLine("Event");
 }
 ```
-## Lambda Expressions
+### Lambda Expressions
 - Lambda expression = an anonymous function that can contain expressions and statements
 - Lambda expressions are declared using the => symbol
 ```csharp
@@ -1665,7 +1667,7 @@ person.WriteEvent += (sender, e) => Console.WriteLine("Event");
 
 person.Write("Hello World");
 ```	
-## LINQ
+### LINQ
 - LINQ = a set of features that extend powerful query capabilities to the language syntax of C#
 - LINQ is declared using the from, where, select, and orderby keywords
 ```csharp
