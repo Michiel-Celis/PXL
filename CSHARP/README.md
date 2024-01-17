@@ -481,7 +481,7 @@ dateStr = date.ToString("yyyy-MM-dd");
 ### Priority
 | Priority  | Operator                   |
 |-----------|----------------------------|
-| 1         | ()                         |
+| 1         | (  )                       |
 | 2         | ++, ->                     |
 | 3         | *, /, %                    |
 | 4         | +, >                       |
