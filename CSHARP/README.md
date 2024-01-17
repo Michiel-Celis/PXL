@@ -1,7 +1,6 @@
 # C# Essentials
 ## Table of Contents
-<Summary>Short Table</Summary>
-<details>
+### Short Table
 
 - [C# Essentials](#c-essentials)
 	- [Table of Contents](#table-of-contents)
@@ -18,13 +17,12 @@
 	- [WPF Elements](#wpf-elements)
 	- [WPF Panels](#wpf-panels)
 
-</details>
-
 <Summary>Full Table</Summary>
 <details>
 
 - [C# Essentials](#c-essentials)
 	- [Table of Contents](#table-of-contents)
+		- [Short Table](#short-table)
 	- [Data Types](#data-types)
 		- [Variables](#variables)
 		- [Constants](#constants)
