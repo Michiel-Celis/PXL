@@ -1,9 +1,7 @@
 # C# Essentials
-## Summary
-### Table of Contents
+## Table of Contents
 - [C# Essentials](#c-essentials)
-	- [Summary](#summary)
-		- [Table of Contents](#table-of-contents)
+	- [Table of Contents](#table-of-contents)
 	- [Data Types](#data-types)
 		- [Variables](#variables)
 		- [Constants](#constants)
@@ -168,7 +166,7 @@
 		- [Events](#events)
 		- [Lambda Expressions](#lambda-expressions)
 - [WPF Essentials](#wpf-essentials)
-	- [Summary](#summary-1)
+	- [Summary](#summary)
 	- [Event Procedures](#event-procedures)
 		- [Xaml handler + code-behind](#xaml-handler--code-behind)
 		- [Code-behind-only handler](#code-behind-only-handler)
