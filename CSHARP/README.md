@@ -1,198 +1,198 @@
 # C# Essentials
 ## Table of Contents
-- [C# Essentials](#c-essentials)
-	- [Table of Contents](#table-of-contents)
-	- [Data Types](#data-types)
-		- [Variables](#variables)
-		- [Constants](#constants)
-		- [Types](#types)
-		- [Suffixes for Numeric Types](#suffixes-for-numeric-types)
-		- [Alphanumeric Types](#alphanumeric-types)
-			- [Escape Sequences](#escape-sequences)
-			- [Verbatim Strings](#verbatim-strings)
-			- [String Interpolation](#string-interpolation)
-		- [Declaration](#declaration)
-		- [Initialization](#initialization)
-		- [Scope and Lifetime](#scope-and-lifetime)
-			- [Local Variables](#local-variables)
-			- [Global Variables](#global-variables)
-		- [Type Conversion](#type-conversion)
-			- [String to Numeric Types](#string-to-numeric-types)
-			- [String Formatting](#string-formatting)
-			- [String \<\> Numeric conversions](#string--numeric-conversions)
-			- [Numeric Types to String](#numeric-types-to-string)
-			- [Explicit Numeric Conversions](#explicit-numeric-conversions)
-			- [Implicit Numeric Conversions](#implicit-numeric-conversions)
-			- [Boolean to String and Vice Versa](#boolean-to-string-and-vice-versa)
-			- [DateTime Conversions](#datetime-conversions)
-	- [Operators](#operators)
-		- [Arithmetic Operators](#arithmetic-operators)
-		- [Assignment Operators](#assignment-operators)
-		- [Comparison Operators](#comparison-operators)
-		- [Logical Operators](#logical-operators)
-		- [Priority](#priority)
-	- [Control Flow](#control-flow)
-		- [Nesting](#nesting)
-		- [if](#if)
-		- [switch](#switch)
-		- [while](#while)
-		- [do while](#do-while)
-		- [for](#for)
-		- [foreach](#foreach)
-		- [break](#break)
-		- [continue](#continue)
-		- [return](#return)
-	- [Naming Conventions](#naming-conventions)
-		- [Pascal Case](#pascal-case)
-		- [Camel Case](#camel-case)
-		- [Hungarian Notation](#hungarian-notation)
-	- [Often used methods](#often-used-methods)
-		- [System.Math](#systemmath)
-			- [Abs()](#abs)
-			- [Ceiling()](#ceiling)
-			- [Floor()](#floor)
-			- [Max()](#max)
-			- [Min()](#min)
-			- [Pow()](#pow)
-			- [Round()](#round)
-			- [Sqrt()](#sqrt)
-		- [System.String](#systemstring)
-			- [Compare()💚](#compare)
-			- [Concat()💚](#concat)
-			- [Contains()](#contains)
-			- [EndsWith()](#endswith)
-			- [Equals()💚](#equals)
-			- [IndexOf()💚](#indexof)
-			- [Insert()💚](#insert)
-			- [Join()](#join)
-			- [IndexOf()](#indexof-1)
-			- [Length()💚](#length)
-			- [PadLeft()💚](#padleft)
-			- [PadRight()💚](#padright)
-			- [Remove()💚](#remove)
-			- [Replace()💚](#replace)
-			- [Split()](#split)
-			- [StartsWith()](#startswith)
-			- [Substring()💚](#substring)
-			- [ToLower()](#tolower)
-			- [ToUpper()](#toupper)
-			- [Trim()](#trim)
-			- [TrimEnd()](#trimend)
-			- [TrimStart()](#trimstart)
-			- [IsNullOrEmpty()](#isnullorempty)
-			- [IsNullOrWhiteSpace()](#isnullorwhitespace)
-			- [Format()](#format)
-			- [Parse()](#parse)
-			- [TryParse()](#tryparse)
-			- [ToString()](#tostring)
-		- [System.Text.StringBuilder](#systemtextstringbuilder)
-			- [Append()💚](#append)
-			- [AppendLine()💚](#appendline)
-			- [AppendFormat()](#appendformat)
-			- [Insert()](#insert-1)
-			- [Remove()](#remove-1)
-			- [Replace()](#replace-1)
-			- [ToString()](#tostring-1)
-		- [System.Windows.MessageBox (WPF)💚](#systemwindowsmessagebox-wpf)
-			- [Show()](#show)
-		- [System.Windows.Forms.MessageBox (WinForms)](#systemwindowsformsmessagebox-winforms)
-			- [Show()](#show-1)
-		- [Microsoft.VisualBasic.Interaction💚](#microsoftvisualbasicinteraction)
-			- [InputBox()](#inputbox)
-		- [System.DateTime](#systemdatetime)
-		- [System.TimeSpan](#systemtimespan)
-		- [System.DispathcerTimer (WPF)](#systemdispathcertimer-wpf)
-	- [Methods and Parameters](#methods-and-parameters)
-		- [Methods](#methods)
-		- [Void procedure](#void-procedure)
-		- [Function procedure](#function-procedure)
-		- [Event procedure](#event-procedure)
-		- [Method overloading](#method-overloading)
-	- [Data Grouping](#data-grouping)
-		- [Arrays 💚](#arrays-)
-			- [Array Methods](#array-methods)
-				- [Length](#length-1)
-				- [IndexOf](#indexof-2)
-				- [Sort](#sort)
-				- [Reverse](#reverse)
-				- [Clear](#clear)
-				- [Copy](#copy)
-				- [Resize](#resize)
-				- [ToList](#tolist)
-		- [Multidimensional Arrays](#multidimensional-arrays)
-		- [Jagged Arrays](#jagged-arrays)
-		- [Lists 💚](#lists-)
-			- [List Methods](#list-methods)
-				- [Add](#add)
-				- [AddRange](#addrange)
-				- [Insert](#insert-2)
-				- [Remove](#remove-2)
-				- [RemoveAt](#removeat)
-				- [RemoveRange](#removerange)
-				- [Clear](#clear-1)
-				- [Contains](#contains-1)
-				- [IndexOf](#indexof-3)
-				- [Sort](#sort-1)
-				- [Reverse](#reverse-1)
-				- [ToArray](#toarray)
-				- [ToList](#tolist-1)
-		- [Dictionaries 💚](#dictionaries-)
-			- [Dictionary Methods](#dictionary-methods)
-				- [Add](#add-1)
-				- [Remove](#remove-3)
-				- [Clear](#clear-2)
-				- [ContainsKey](#containskey)
-				- [ContainsValue](#containsvalue)
-				- [TryGetValue](#trygetvalue)
-				- [Keys](#keys)
-				- [Values](#values)
-		- [Enumerations](#enumerations)
-			- [Enumeration Methods](#enumeration-methods)
-				- [GetNames](#getnames)
-				- [GetValues](#getvalues)
-				- [Parse](#parse-1)
-				- [TryParse](#tryparse-1)
-		- [Structs](#structs)
-		- [Classes](#classes)
-			- [Properties](#properties)
-		- [Constructors](#constructors)
-		- [Inheritance](#inheritance)
-		- [Polymorphism](#polymorphism)
-		- [Abstract Classes](#abstract-classes)
-		- [Interfaces](#interfaces)
-		- [Extension Methods](#extension-methods)
-	- [Generics](#generics)
-		- [Delegates](#delegates)
-		- [Events](#events)
-		- [Lambda Expressions](#lambda-expressions)
+	* [Table of Contents](#table-of-contents)
+	* [Data Types](#data-types)
+	+ [Variables](#variables)
+	+ [Constants](#constants)
+	+ [Types](#types)
+	+ [Suffixes for Numeric Types](#suffixes-for-numeric-types)
+	+ [Alphanumeric Types](#alphanumeric-types)
+		- [Escape Sequences](#escape-sequences)
+		- [Verbatim Strings](#verbatim-strings)
+		- [String Interpolation](#string-interpolation)
+	+ [Declaration](#declaration)
+	+ [Initialization](#initialization)
+	+ [Scope and Lifetime](#scope-and-lifetime)
+		- [Local Variables](#local-variables)
+		- [Global Variables](#global-variables)
+	+ [Type Conversion](#type-conversion)
+		- [String to Numeric Types](#string-to-numeric-types)
+		- [String Formatting](#string-formatting)
+		- [String <> Numeric conversions](#string----numeric-conversions)
+		- [Numeric Types to String](#numeric-types-to-string)
+		- [Explicit Numeric Conversions](#explicit-numeric-conversions)
+		- [Implicit Numeric Conversions](#implicit-numeric-conversions)
+		- [Boolean to String and Vice Versa](#boolean-to-string-and-vice-versa)
+		- [DateTime Conversions](#datetime-conversions)
+	* [Operators](#operators)
+	+ [Arithmetic Operators](#arithmetic-operators)
+	+ [Assignment Operators](#assignment-operators)
+	+ [Comparison Operators](#comparison-operators)
+	+ [Logical Operators](#logical-operators)
+	+ [Priority](#priority)
+	* [Control Flow](#control-flow)
+	+ [Nesting](#nesting)
+	+ [if](#if)
+	+ [switch](#switch)
+	+ [while](#while)
+	+ [do while](#do-while)
+	+ [for](#for)
+	+ [foreach](#foreach)
+	+ [break](#break)
+	+ [continue](#continue)
+	+ [return](#return)
+	* [Naming Conventions](#naming-conventions)
+	+ [Pascal Case](#pascal-case)
+	+ [Camel Case](#camel-case)
+	+ [Hungarian Notation](#hungarian-notation)
+	* [Often used methods](#often-used-methods)
+	+ [System.Math](#systemmath)
+		- [Abs()](#abs--)
+		- [Ceiling()](#ceiling--)
+		- [Floor()](#floor--)
+		- [Max()](#max--)
+		- [Min()](#min--)
+		- [Pow()](#pow--)
+		- [Round()](#round--)
+		- [Sqrt()](#sqrt--)
+	+ [System.String](#systemstring)
+		- [Compare()💚](#compare----)
+		- [Concat()💚](#concat----)
+		- [Contains()](#contains--)
+		- [EndsWith()](#endswith--)
+		- [Equals()💚](#equals----)
+		- [IndexOf()💚](#indexof----)
+		- [Insert()💚](#insert----)
+		- [Join()](#join--)
+		- [IndexOf()](#indexof--)
+		- [Length()💚](#length----)
+		- [PadLeft()💚](#padleft----)
+		- [PadRight()💚](#padright----)
+		- [Remove()💚](#remove----)
+		- [Replace()💚](#replace----)
+		- [Split()](#split--)
+		- [StartsWith()](#startswith--)
+		- [Substring()💚](#substring----)
+		- [ToLower()](#tolower--)
+		- [ToUpper()](#toupper--)
+		- [Trim()](#trim--)
+		- [TrimEnd()](#trimend--)
+		- [TrimStart()](#trimstart--)
+		- [IsNullOrEmpty()](#isnullorempty--)
+		- [IsNullOrWhiteSpace()](#isnullorwhitespace--)
+		- [Format()](#format--)
+		- [Parse()](#parse--)
+		- [TryParse()](#tryparse--)
+		- [ToString()](#tostring--)
+	+ [System.Text.StringBuilder](#systemtextstringbuilder)
+		- [Append()💚](#append----)
+		- [AppendLine()💚](#appendline----)
+		- [AppendFormat()](#appendformat--)
+		- [Insert()](#insert--)
+		- [Remove()](#remove--)
+		- [Replace()](#replace--)
+		- [ToString()](#tostring---1)
+	+ [System.Windows.MessageBox (WPF)💚](#systemwindowsmessagebox--wpf---)
+		- [Show()](#show--)
+	+ [System.Windows.Forms.MessageBox (WinForms)](#systemwindowsformsmessagebox--winforms-)
+		- [Show()](#show---1)
+	+ [Microsoft.VisualBasic.Interaction💚](#microsoftvisualbasicinteraction--)
+		- [InputBox()](#inputbox--)
+	+ [System.DateTime](#systemdatetime)
+	+ [System.TimeSpan](#systemtimespan)
+	+ [System.DispathcerTimer (WPF)](#systemdispathcertimer--wpf-)
+	* [Methods and Parameters](#methods-and-parameters)
+	+ [Methods](#methods)
+	+ [Void procedure](#void-procedure)
+	+ [Function procedure](#function-procedure)
+	+ [Event procedure](#event-procedure)
+	+ [Method overloading](#method-overloading)
+	* [Data Grouping](#data-grouping)
+	+ [Arrays 💚](#arrays---)
+		- [Array Methods](#array-methods)
+		* [Length](#length)
+		* [IndexOf](#indexof)
+		* [Sort](#sort)
+		* [Reverse](#reverse)
+		* [Clear](#clear)
+		* [Copy](#copy)
+		* [Resize](#resize)
+		* [ToList](#tolist)
+	+ [Multidimensional Arrays](#multidimensional-arrays)
+	+ [Jagged Arrays](#jagged-arrays)
+	+ [Lists 💚](#lists---)
+		- [List Methods](#list-methods)
+		* [Add](#add)
+		* [AddRange](#addrange)
+		* [Insert](#insert)
+		* [Remove](#remove)
+		* [RemoveAt](#removeat)
+		* [RemoveRange](#removerange)
+		* [Clear](#clear-1)
+		* [Contains](#contains)
+		* [IndexOf](#indexof-1)
+		* [Sort](#sort-1)
+		* [Reverse](#reverse-1)
+		* [ToArray](#toarray)
+		* [ToList](#tolist-1)
+	+ [Dictionaries 💚](#dictionaries---)
+		- [Dictionary Methods](#dictionary-methods)
+		* [Add](#add-1)
+		* [Remove](#remove-1)
+		* [Clear](#clear-2)
+		* [ContainsKey](#containskey)
+		* [ContainsValue](#containsvalue)
+		* [TryGetValue](#trygetvalue)
+		* [Keys](#keys)
+		* [Values](#values)
+	+ [Enumerations](#enumerations)
+		- [Enumeration Methods](#enumeration-methods)
+		* [GetNames](#getnames)
+		* [GetValues](#getvalues)
+		* [Parse](#parse)
+		* [TryParse](#tryparse)
+	+ [Structs](#structs)
+	+ [Classes](#classes)
+		- [Properties](#properties)
+	+ [Constructors](#constructors)
+	+ [Inheritance](#inheritance)
+	+ [Polymorphism](#polymorphism)
+	+ [Abstract Classes](#abstract-classes)
+	+ [Interfaces](#interfaces)
+	+ [Extension Methods](#extension-methods)
+	* [Generics](#generics)
+	+ [Delegates](#delegates)
+	+ [Events](#events)
+	+ [Lambda Expressions](#lambda-expressions)
+	+ [LINQ](#linq)
 - [WPF Essentials](#wpf-essentials)
-	- [Summary](#summary)
-	- [Event Procedures](#event-procedures)
-		- [Xaml handler + code-behind](#xaml-handler--code-behind)
-		- [Code-behind-only handler](#code-behind-only-handler)
-	- [Event Types](#event-types)
-		- [Click Events](#click-events)
-		- [Key Events](#key-events)
+	* [Summary](#summary)
+	* [Event Procedures](#event-procedures)
+	+ [Xaml handler + code-behind](#xaml-handler---code-behind)
+	+ [Code-behind-only handler](#code-behind-only-handler)
+	* [Event Types](#event-types)
+	+ [Click Events](#click-events)
+	+ [Key Events](#key-events)
 - [WPF Essentials](#wpf-essentials-1)
-	- [WPF Elements](#wpf-elements)
-		- [Image](#image)
-		- [TextBlock](#textblock)
-		- [TextBox](#textbox)
-		- [Button](#button)
-		- [CheckBox](#checkbox)
-		- [RadioButton](#radiobutton)
-		- [ListBox](#listbox)
-		- [ComboBox](#combobox)
-		- [ProgressBar](#progressbar)
-		- [Slider](#slider)
-		- [ScrollViewer](#scrollviewer)
-	- [WPF Panels](#wpf-panels)
-		- [Grid](#grid)
-		- [Canvas](#canvas)
-		- [StackPanel](#stackpanel)
-		- [WrapPanel](#wrappanel)
-		- [DockPanel](#dockpanel)
-		- [Viewbox](#viewbox)
+	* [WPF Elements](#wpf-elements)
+	+ [Image](#image)
+	+ [TextBlock](#textblock)
+	+ [TextBox](#textbox)
+	+ [Button](#button)
+	+ [CheckBox](#checkbox)
+	+ [RadioButton](#radiobutton)
+	+ [ListBox](#listbox)
+	+ [ComboBox](#combobox)
+	+ [ProgressBar](#progressbar)
+	+ [Slider](#slider)
+	+ [ScrollViewer](#scrollviewer)
+	* [WPF Panels](#wpf-panels)
+	+ [Grid](#grid)
+	+ [Canvas](#canvas)
+	+ [StackPanel](#stackpanel)
+	+ [WrapPanel](#wrappanel)
+	+ [DockPanel](#dockpanel)
+	+ [Viewbox](#viewbox)
 
 
 ## Data Types
@@ -205,7 +205,7 @@
 ### Constants
 - **const** = value cannot be changed.
 - Read-Only __Cannot be changed__
-  
+	
 ### Types
 | Type      | Description               			| Size          |
 |-----------|---------------------------------------|---------------|
@@ -1068,7 +1068,7 @@ private static void WriteMethod(int number)
 }
 ```
 - body
-  
+	
 ### Void procedure
 > method that does not return a value
 ```csharp	
@@ -1716,21 +1716,21 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```csharp
 public MainWindow()
 {
-    InitializeComponent();
+	InitializeComponent();
 
-    Button1.Click += Button_Click;
-    Button2.Click += Button_Click;
-    // Attach the event handler to other buttons as needed
+	Button1.Click += Button_Click;
+	Button2.Click += Button_Click;
+	// Attach the event handler to other buttons as needed
 }
 
 private void Button_Click(object sender, RoutedEventArgs e)
 {
-    Button clickedButton = sender as Button;
-    if (clickedButton != null)
-    {
-        // Use the button's Name, Content, or another property to identify it
-        MessageBox.Show("Button clicked: " + clickedButton.Name);
-    }
+	Button clickedButton = sender as Button;
+	if (clickedButton != null)
+	{
+		// Use the button's Name, Content, or another property to identify it
+		MessageBox.Show("Button clicked: " + clickedButton.Name);
+	}
 }
 ```
 
@@ -1800,7 +1800,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 ## WPF Elements
 ### Image
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1822,7 +1822,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### TextBlock
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1846,7 +1846,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### TextBox
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1870,7 +1870,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### Button
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1887,7 +1887,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### CheckBox
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1905,7 +1905,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### RadioButton
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1923,7 +1923,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### ListBox
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1942,7 +1942,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### ComboBox
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1961,7 +1961,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### ProgressBar
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -1980,7 +1980,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### Slider
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2000,7 +2000,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### ScrollViewer
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2021,7 +2021,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 - Grid = a layout panel that arranges child elements in rows and columns
 
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2044,7 +2044,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 </Grid>
 ```
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property | Description |
 | --- | --- |
@@ -2079,7 +2079,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 - Canvas = a layout panel that arranges child elements by coordinates relative to each other
 
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2094,7 +2094,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 <Canvas x:Name="CnvCanvas" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
 ```
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property | Description |
 | --- | --- |
@@ -2119,7 +2119,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 - StackPanel = a layout panel that arranges child elements into a single line that can be oriented horizontally or vertically
 
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2135,7 +2135,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 <StackPanel x:Name="StpStackPanel" Margin="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
 ```
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property | Description |
 | --- | --- |
@@ -2155,7 +2155,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 - WrapPanel = a layout panel that arranges child elements into a single line that can be oriented horizontally or vertically and wraps child elements to the next line when there is no space available
 
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2171,7 +2171,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 <WrapPanel x:Name="WrpWrapPanel" Margin="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
 ```
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property | Description |
 | --- | --- |
@@ -2189,9 +2189,9 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 
 ### DockPanel
 - DockPanel = a layout panel that arranges child elements relative to each other, either horizontally or vertically, based on the value of an attached Dock property
-  
+	
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2207,7 +2207,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 <DockPanel x:Name="DckDockPanel" Margin="0" LastChildFill="True" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
 ```
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property | Description |
 | --- | --- |
@@ -2227,7 +2227,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 - Viewbox = a layout control that stretches or shrinks its content to fit the available space
 
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property  | Description                |
 |-----------|----------------------------|
@@ -2244,7 +2244,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 <Viewbox x:Name="VbxViewbox" Margin="0" Stretch="Uniform" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
 ```
 <details>
-  <summary>Properties</summary>
+	<summary>Properties</summary>
 
 | Property | Description |
 | --- | --- |
