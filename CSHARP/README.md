@@ -211,6 +211,12 @@
 		- [WrapPanel](#wrappanel)
 		- [DockPanel](#dockpanel)
 		- [Viewbox](#viewbox)
+- [Exam](#exam)
+	- [Changing colors from code-behind](#changing-colors-from-code-behind)
+	- [Changing colors from code-behind using a resource](#changing-colors-from-code-behind-using-a-resource)
+	- [Scalability viewbox](#scalability-viewbox)
+	- [Fixed size frontend, non resizeable](#fixed-size-frontend-non-resizeable)
+	- [](#)
   
 </details>
 
@@ -2275,7 +2281,7 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 </details>
 
 ```html
-<Viewbox x:Name="VbxViewbox" Margin="0" Stretch="Uniform" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
+	<Viewbox x:Name="VbxViewbox" Margin="0" Stretch="Uniform" StretchDirection="Both" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" />
 ```
 <details>
   <summary>Properties</summary>
@@ -2292,6 +2298,82 @@ e.KeyboardDevice.Modifiers == ModifierKeys.Windows
 	<TextBox Text="TextBox" />
 	<Button Content="Button" />
 </Viewbox>
+```
+
+# Exam
+| SL 41PRO1020 C# Essentials | 18/01/2024 | 13:30 | EG050 |
+| --- | --- | --- | --- |
+
+## Changing colors from code-behind
+```html
+<Grid x:Name="myGrid">
+    <!-- Grid content here -->
+</Grid>
+```
+```csharp
+myGrid.Background = new SolidColorBrush(Colors.LightBlue);
+```
+
+## Changing colors from code-behind using a resource
+```html
+<Grid x:Name="myGrid">
+	<Grid.Resources>
+		<SolidColorBrush x:Key="myBrush" Color="LightBlue" />
+	</Grid.Resources>
+	<!-- Grid content here -->
+</Grid>
+```
+```csharp
+myGrid.Background = (SolidColorBrush)FindResource("myBrush");
+```
+
+## Scalability viewbox
+```html
+<Viewbox x:Name="myViewbox">-
+	<!-- Viewbox content here -->
+</Viewbox>
+```
+```csharp
+myViewbox.Stretch = Stretch.Uniform;
+```
+
+## Fixed size frontend, non resizeable
+```html
+<Window x:Class="WpfApp1.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+	<!-- Window content here -->
+</Window>
+```
+
+## Menuitems with multiple levels
+```html
+<Menu x:Name="myMenu">
+	<MenuItem Header="File">
+		<MenuItem Header="New" />
+		<MenuItem Header="Open" />
+		<MenuItem Header="Save" />
+		<MenuItem Header="Save as" />
+		<Separator />
+		<MenuItem Header="Exit" />
+	</MenuItem>
+	<MenuItem Header="Edit">
+		<MenuItem Header="Undo" />
+		<MenuItem Header="Redo" />
+		<Separator />
+		<MenuItem Header="Cut" />
+		<MenuItem Header="Copy" />
+		<MenuItem Header="Paste" />
+	</MenuItem>
+</Menu>
+```
+
+## grid background color static
+```html
+<Grid x:Name="myGrid" Background="LightBlue">
+	<!-- Grid content here -->
+</Grid>
 ```
 
 
