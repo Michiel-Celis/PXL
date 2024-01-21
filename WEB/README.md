@@ -89,6 +89,10 @@
 		- [User Select](#user-select)
 		- [Resize](#resize)
 		- [Box Sizing](#box-sizing)
+	- [Naming Conventions](#naming-conventions)
+		- [BEM](#bem)
+		- [SMACSS](#smacss)
+		- [OOCSS](#oocss)
 
 # HTML
 ## Structure
@@ -744,5 +748,68 @@ div {
 }
 ```
 
-
+## Naming Conventions
+### BEM
+> BEM stands for Block, Element, Modifier. It is a naming convention for CSS classes. It was invented by the team at Yandex to improve the maintainability of their stylesheets.
+```css
+.block {}
+.block__element {}
+.block__upper-part {} // readablility for split-words
+.block--modifier {}
+```
+### SMACSS
+> SMACSS stands for Scalable and Modular Architecture for CSS. It is more of a style guide than a rigid framework. It is not a library or a framework. It is a set of recommendations for writing CSS.
+```css
+/* Base */
+html {}
+body {}
+/* Layout */
+.layout {}
+.layout__header {}
+.layout__content {}
+.layout__footer {}
+/* Module */
+.module {}
+.module__title {}
+.module__content {}
+.module__button {}
+/* State */
+.is-hidden {}
+.is-collapsed {}
+.is-expanded {}
+.is-active {}
+.is-inactive {}
+.is-disabled {}
+.is-visible {}
+.is-hidden {}
+.is-loading {}
+.is-success {}
+.is-error {}
+```
+### OOCSS
+> OOCSS stands for Object Oriented CSS. It is a way of writing CSS that focuses on reusability, repetition, and maintainability.
+```css
+/* Object */
+.o-layout {}
+.o-layout__header {}
+.o-layout__content {}
+.o-layout__footer {}
+/* Component */
+.c-layout {}
+.c-layout__header {}
+.c-layout__content {}
+.c-layout__footer {}
+/* Utility */
+.u-hidden {}
+.u-collapsed {}
+.u-expanded {}
+.u-active {}
+.u-inactive {}
+.u-disabled {}
+.u-visible {}
+.u-hidden {}
+.u-loading {}
+.u-success {}
+.u-error {}
+```
 
