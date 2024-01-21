@@ -72,6 +72,23 @@
 		- [Combinators](#combinators)
 		- [Multiple Selectors](#multiple-selectors)
 	- [CSS Comments](#css-comments)
+	- [Units](#units)
+	- [Colors](#colors)
+		- [Notations](#notations)
+		- [Color Names](#color-names)
+	- [Text Properties](#text-properties)
+		- [Font](#font)
+		- [Text](#text-1)
+		- [Links](#links-1)
+		- [Lists](#lists-1)
+		- [Tables](#tables-1)
+		- [Quotes](#quotes)
+		- [Icons](#icons)
+		- [Opacity](#opacity)
+		- [Cursor](#cursor)
+		- [User Select](#user-select)
+		- [Resize](#resize)
+		- [Box Sizing](#box-sizing)
 
 # HTML
 ## Structure
@@ -584,7 +601,7 @@ a:hover {}
 ### Pseudo-elements
 > A CSS pseudo-element is used to style specified parts of an element.
 ```css
-p::first-line {}
+	p::first-line {}
 ```
 ### Combinators
 > Combinators are used to combine multiple selectors into more specific selectors.
@@ -599,4 +616,133 @@ h1, h2, p {}
 ```css
 /* This is a single-line comment */
 ```
+
+## Units
+> CSS has several different units for expressing a length.
+
+| --- | Unit | Description |
+| --- | --- | --- |
+| 💚 | % | Relative to the parent element |
+| 💚 | px | pixels |
+| 💚 | em | Relative to the font-size of the element |
+| 💚 | rem | Relative to font-size of the root element |
+| 💚 | vw | Relative to 1% of the width of the viewport* |
+| 💚 | vh | Relative to 1% of the height of the viewport* |
+| | vmin | Relative to 1% of viewport's* smaller dimension |
+| | vmax | Relative to 1% of viewport's* larger dimension |
+|||
+| | cm | centimeters |
+| | mm | millimeters |
+| | in | inches (1in = 96px = 2.54cm) |
+| 💛 | pt | points (1pt = 1/72 of 1in) |
+| | pc | picas (1pc = 12 pt) |
+| | ex | Relative to the x-height of the current font (rarely used) |
+| | ch | Relative to width of the "0" (zero) |
+
+## Colors
+### Notations
+> RGB, RGBA, HEX, HSL, HSLA
+
+| --- | Color | Description |
+| --- | --- | --- |
+| 💚 | rgb(0,0,0) | 0-256 Red Green Blue |
+| 💚 | rgba(0,0,0,0) | 0-256 Red Green Blue Opacity |
+| 💚 | #000000 | Hexadecimal Red Blue Green |
+| 💚 | hsl(0,0%,0%) | Hue Saturation Lightness |
+| 💚 | hsla(0,0%,0%,0) | Hue Saturation Lightness Opacity |
+
+### Color Names
+> CSS has 147 predefined color names that can be used without any prior declaration:
+```css
+Aqua, Black, Blue, Fuchsia, Gray, Green, Lime, Maroon, Navy, Olive, Orange, Purple, Red, Silver, Teal, White, Yellow ...
+```
+
+## Text Properties
+### Font
+```css
+font-family: "Times New Roman", Times, serif;
+font-size: 20px;
+font-weight: bold;
+font-style: italic;
+font-variant: small-caps;
+```
+### Text
+```css
+color: #000000;
+text-align: center;
+text-decoration: underline;
+text-indent: 50px;
+text-shadow: 2px 2px 5px #FF0000;
+text-transform: uppercase;
+line-height: 1.5;
+letter-spacing: 2px;
+word-spacing: 5px;
+white-space: nowrap;
+```
+### Links
+```css
+a:link {color: #FF0000;}		/* unvisited link */
+a:visited {color: #00FF00;}		/* visited link */
+a:hover {color: #FF00FF;}		/* mouse over link */
+a:active {color: #0000FF;}		/* selected link */
+```
+### Lists
+```css
+list-style-type: disc;
+list-style-position: inside;
+list-style-image: url('sqpurple.gif');
+```
+### Tables
+```css
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+```
+### Quotes
+```css
+q:lang(no) {quotes: "«" "»" "‹" "›";}
+q:lang(en) {quotes: "“" "”" "‘" "’";}
+```
+### Icons
+```css
+.icon {
+	width: 16px;
+	height: 16px;
+	background-image: url('img_tree.png');
+}
+```
+### Opacity
+```css
+div {
+	opacity: 0.5;
+}
+```
+### Cursor
+```css
+div {
+	cursor: pointer; // auto, default, none, context-menu, help, pointer, progress, wait, cell, crosshair, text, vertical-text, alias, copy, move, no-drop, not-allowed, e-resize, n-resize, ne-resize, nw-resize, s-resize, se-resize, sw-resize, w-resize, ew-resize, ns-resize, nesw-resize, nwse-resize, col-resize, row-resize, all-scroll, zoom-in, zoom-out, grab, grabbing
+}
+```
+### User Select
+```css
+div {
+	user-select: none; // none, auto, text, contain, all
+}
+```
+### Resize
+```css
+div {
+	resize: both; // horizontal, vertical, none, both
+}
+```
+### Box Sizing
+```css
+div {
+	box-sizing: border-box;  // include padding and border in the width and height
+	box-sizing: content-box; // default
+}
+```
+
+
 
