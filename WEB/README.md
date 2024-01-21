@@ -48,29 +48,30 @@
 			- [Breaks](#breaks)
 			- [Horizontal Rule](#horizontal-rule)
 			- [word break](#word-break)
-	- [CSS](#css)
-		- [Selectors](#selectors)
-			- [Element Selector](#element-selector)
-			- [ID Selector](#id-selector)
-			- [Class Selector](#class-selector)
-			- [Universal Selector](#universal-selector)
-			- [Group Selector](#group-selector)
-			- [Descendant Selector](#descendant-selector)
-			- [Child Selector](#child-selector)
-			- [Adjacent Sibling Selector](#adjacent-sibling-selector)
-			- [General Sibling Selector](#general-sibling-selector)
-			- [Attribute Selector](#attribute-selector)
-			- [Attribute Value Selector](#attribute-value-selector)
-			- [Attribute Value Starts With Selector](#attribute-value-starts-with-selector)
-			- [Attribute Value Ends With Selector](#attribute-value-ends-with-selector)
-			- [Attribute Value Contains Selector](#attribute-value-contains-selector)
-			- [Attribute Value Contains Word Selector](#attribute-value-contains-word-selector)
-			- [Attribute Value Contains Prefix Selector](#attribute-value-contains-prefix-selector)
-			- [Pseudo-classes](#pseudo-classes)
-			- [Pseudo-elements](#pseudo-elements)
-			- [Combinators](#combinators)
-			- [Multiple Selectors](#multiple-selectors)
-			- [CSS Comments](#css-comments)
+- [CSS](#css)
+	- [Selectors](#selectors)
+		- [Overview](#overview)
+		- [Element Selector](#element-selector)
+		- [#id Selector](#id-selector)
+		- [.class Selector](#class-selector)
+		- [Universal Selector](#universal-selector)
+		- [Group Selector](#group-selector)
+		- [Descendant Selector](#descendant-selector)
+		- [Child Selector](#child-selector)
+		- [Adjacent Sibling Selector](#adjacent-sibling-selector)
+		- [General Sibling Selector](#general-sibling-selector)
+		- [Attribute Selector](#attribute-selector)
+		- [Attribute Value Selector](#attribute-value-selector)
+		- [Attribute Value Starts With Selector](#attribute-value-starts-with-selector)
+		- [Attribute Value Ends With Selector](#attribute-value-ends-with-selector)
+		- [Attribute Value Contains Selector](#attribute-value-contains-selector)
+		- [Attribute Value Contains Word Selector](#attribute-value-contains-word-selector)
+		- [Attribute Value Contains Prefix Selector](#attribute-value-contains-prefix-selector)
+		- [Pseudo-classes](#pseudo-classes)
+		- [Pseudo-elements](#pseudo-elements)
+		- [Combinators](#combinators)
+		- [Multiple Selectors](#multiple-selectors)
+	- [CSS Comments](#css-comments)
 
 # HTML
 ## Structure
@@ -297,6 +298,8 @@
 <b>Bold text</b>
 <strong>Important text</strong>
 <i>Italic text</i>
+<em>Emphasized text</em>
+<u>Underlined text</u>
 <q>This is a short quotation</q>
 <em>Emphasized text</em>
 <mark>Marked text</mark>
@@ -396,121 +399,204 @@ The cat was playing in the garden.
 <wbr>
 ```
 
-## CSS
-### Selectors
+# CSS
+## Selectors
+
 > Selectors are used to "find" (or select) the HTML elements you want to style.
-#### Element Selector
+
+### Overview
+```css
+// ID and Class Selectors
+div #♾️() {} 	// ID Selector
+div .♾️() {} 	// Class Selector
+
+// Descendant Selectors
+div p {} 	// Descendant Selector 
+div > p {} 	// Child Selector
+div + p {} 	// Adjacent Sibling Selector
+div - p {} 	// Subsequent Sibling Selector
+div ~ p {} 	// General Sibling Selector
+div * {} 	// Universal Selector 
+
+// Grouping Selectors
+div , p {} 	// Group Selector 
+div | p {} 	// Column Selector 
+
+// Attribute Selectors
+div = p {} 	// Attribute Selector
+div / p {} 	// Path Selector
+
+// Pseudo Selectors
+div : p {} 	// Psuedo-class Selector
+div :: p {} // Psuedo-element Selector
+
+// Pseudo-class Selectors
+:not() {} , :matches(p) {} , :nth-child(p) {} , :nth-last-child(p) {} , :nth-last-of-type(p) {} , :nth-of-type(p) {} , :only-child {} , :only-of-type {} , :root {} , :target {} , :where() {} , :has() {} , :is() {} , :dir() {} , :lang() {} , :scope() {} , :current() {} , :past() {} , :future() {} , :active {} , :any() {} , :blank {} , :checked {} , :default {} , :disabled {} , :empty {} , :enabled {} , :first {} , :first-child {} , :first-of-type {} , :fullscreen {} , :focus {} , :hover {} , :indeterminate {} , :in-range {} , :invalid {} , :last-child {} , :last-of-type {} , :left {} , :link {} , :not() {} , :nth-child() {} , :nth-last-child() {} , :nth-last-of-type() {} , :nth-of-type() {} , :only-child {} , :only-of-type {} , :optional {} , :out-of-range {} , :read-only {} , :read-write {} , :required {} , :right {} , :root {} , :scope {} , :target {} , :valid {} , :visited {} , :where() {} , :default {} , :dir() {} , :drop() {} , :fullscreen {} , :host() {} , :host-context() {} , :indeterminate {} , :is() {} , :lang() {} , :matches() {} , :not() {} , :nth-child() {} , :nth-last-child() {} , :nth-last-of-type() {} , :nth-of-type() {} , :placeholder-shown {} , :read-only {} , :read-write {} , :required {} , :right {} , :root {} , :scope {} , :target {} , :valid {} , :visited {} , :where() {} , :active {} , :any-link {} , :blank {} , :checked {} , :current {} , :default {} , :defined {} , :disabled {} , :drop {} , :empty {} , :enabled {} , :first {} , :first-child {} , :first-of-type {} , :fullscreen {} , :focus {} , :focus-visible {} , :focus-within {} , :future {} , :hover {} , :in-range
+
+// Pseudo-element Selectors
+::after {} , ::before {} , ::cue {} , ::first-letter {} , ::first-line {} , ::grammar-error {} , ::marker {} , ::placeholder {} , ::selection {} , ::slotted() {} , ::spelling-error {} , ::backdrop {} , ::cue() {} , ::part() {} , ::placeholder-shown {} , ::selection {} , ::slotted() {} , ::target-text {} , ::after {} , ::before {}
+```
+
+<details><summary>Most common selectors</summary>
+
+| Selector | Example | Example description |
+| --- | --- | --- |
+| * | * | Selects all elements |
+| .class | .intro | Selects all elements with class="intro" |
+| #id | #firstname | Selects the element with id="firstname" |
+| element | p | Selects all \<p> elements |
+| element,element | div, p | Selects all \<div> elements and all \<p> elements |
+| element element | div p | Selects all \<p> elements inside \<div> elements |
+| element>element | div > p | Selects all \<p> elements where the parent is a \<div> element |
+| element+element | div + p | Selects all \<p> elements that are placed immediately after \<div> elements |
+| element1~element2 | p ~ ul | Selects every \<ul> element that are preceded by a \<p> element |
+| [attribute] | [target] | Selects all elements with a target attribute |
+| [attribute=value] | [target=_blank] | Selects all elements with target="_blank" |
+| [attribute~=value] | [title~=flower] | Selects all elements with a title attribute containing the word "flower" |
+| [attribute\|=value] | [lang\|=en] | Selects all elements with a lang attribute value starting with "en" |
+
+</details>
+
+<details><summary>Psuedo-class selectors</summary>
+
+| Selector | Example | Example description |
+| --- | --- | --- |
+| :active | a:active | Selects the active link |
+| ::after | p::after | Insert something after the content of each \<p> element |
+| ::before | p::before | Insert something before the content of each \<p> element |
+| :checked | input:checked | Selects every checked \<input> element |
+| :disabled | input:disabled | Selects every disabled \<input> element |
+| :empty | p:empty | Selects every \<p> element that has no children (including text nodes) |
+| :enabled | input:enabled | Selects every enabled \<input> element |
+| :first-child | p:first-child | Selects every \<p> element that is the first child of its parent |
+| ::first-letter | p::first-letter | Selects the first letter of every \<p> element |
+| ::first-line | p::first-line | Selects the first line of every \<p> element |
+| :first-of-type | p:first-of-type | Selects every \<p> element that is the first \<p> element of its parent |
+| :focus | input:focus | Selects the input element which has focus |
+| :hover | a:hover | Selects links on mouse over |
+| :in-range | input:in-range | Selects input elements with a value within a specified range |
+| :invalid | input:invalid | Selects all input elements with an invalid value |
+| :lang(language) | p:lang(it) | Selects every \<p> element with a lang attribute value starting with "it" |
+| :last-child | p:last-child | Selects every \<p> element that is the last child of its parent |
+| :last-of-type | p:last-of-type | Selects every \<p> element that is the last \<p> element of its parent |
+| :link | a:link | Selects all unvisited links |
+| ::marker | li::marker | Selects the marker box of a list item |
+| :nth-child(n) | p:nth-child(2) | Selects every \<p> element that is the second child of its parent |
+| :nth-last-child(n) | p:nth-last-child(2) | Selects every \<p> element that is the second child of its parent, counting from the last child |
+| :nth-last-of-type(n) | p:nth-last-of-type(2) | Selects every \<p> element that is the second \<p> element of its parent, counting from the last child |
+| :nth-of-type(n) | p:nth-of-type(2) | Selects every \<p> element that is the second \<p> element of its parent |
+| :not(selector) | :not(p) | Selects every element that is not a \<p> element |
+| :only-of-type | p:only-of-type | Selects every \<p> element that is the only \<p> element of its parent |
+| :only-child | p:only-child | Selects every \<p> element that is the only child of its parent |
+| :optional | input:optional | Selects input elements with no "required" attribute |
+| ::placeholder | input::placeholder | Selects input elements with placeholder text specified |
+| :read-only | input:read-only | Selects input elements with the "readonly" attribute specified |
+| :read-write | input:read-write | Selects input elements with the "readonly" attribute NOT specified |
+| :required | input:required | Selects input elements with the "required" attribute specified |
+| :root | :root | Selects the document's root element |
+| ::selection | ::selection | Selects the portion of an element that is selected by a user |
+| :target | #news:target | Selects the current active #news element (clicked on a URL containing that anchor name) |
+| :valid | input:valid | Selects all input elements with a valid value |
+| :visited | a:visited | Selects all visited links |
+
+</details>
+
+### Element Selector
 ```css
 p {}
 ```
-#### ID Selector
+### #id Selector
 ```css
 #unique {}
 ```
-#### Class Selector
+### .class Selector
 ```css
 .classname {}
 ```
-#### Universal Selector
+### Universal Selector
+> The universal selector (*) selects all HTML elements on the page.
 ```css
 * {}
 ```
-#### Group Selector
+### Group Selector
+> The group selector selects all the \<h1>, \<h2> and \<p> elements in a page.
 ```css
 h1, h2, p {}
 ```
-#### Descendant Selector
+### Descendant Selector
+> The descendant selector matches all elements that are descendants of a specified element.
 ```css
-div p {
-  color: red;
-}
+div p {}
 ```
-#### Child Selector
+### Child Selector
+> The child selector selects all elements that are the children of a specified element.
 ```css
-div > p {
-  color: red;
-}
+div > p {}
 ```
-#### Adjacent Sibling Selector
+### Adjacent Sibling Selector
+> The adjacent sibling selector selects all elements that are the immediately following siblings of a specified element.
 ```css
-div + p {
-  color: red;
-}
+div + p {}
 ```
-#### General Sibling Selector
+### General Sibling Selector
+> The general sibling selector selects all elements that are siblings of a specified element.
+>
+> This example selects all \<p> elements that are siblings of \<div> elements:
 ```css
-div ~ p {
-  color: red;
-}
+div ~ p {}
 ```
-#### Attribute Selector
+
+### Attribute Selector
+> The CSS attribute selector matches elements based on the presence or value of a given attribute.
 ```css
-a[target] {
-  color: red;
-}
+a[target] {}
 ```
-#### Attribute Value Selector
+### Attribute Value Selector
+> The CSS attribute value selector matches elements based on the presence or value of a given attribute.
 ```css
-a[target="_blank"] {
-  color: red;
-}
+a[target="_blank"] {}
 ```
-#### Attribute Value Starts With Selector
+### Attribute Value Starts With Selector
 ```css
-a[href^="https"] {
-  color: red;
-}
+a[href^="https"] {}
 ```
-#### Attribute Value Ends With Selector
+### Attribute Value Ends With Selector
 ```css
-a[href$=".pdf"] {
-  color: red;
-}
+a[href$=".pdf"] {}
 ```
-#### Attribute Value Contains Selector
+### Attribute Value Contains Selector
 ```css
-a[href*="w3schools"] {
-  color: red;
-}
+a[href*="w3schools"] {}
 ```
-#### Attribute Value Contains Word Selector
+### Attribute Value Contains Word Selector
 ```css
-a[href~="w3schools"] {
-  color: red;
-}
+a[href~="w3schools"] {}
 ```
-#### Attribute Value Contains Prefix Selector
+### Attribute Value Contains Prefix Selector
 ```css
-a[href|="https"] {
-  color: red;
-}
+a[href|="https"] {}
 ```
-#### Pseudo-classes
+### Pseudo-classes
+> A pseudo-class is used to define a special state of an element.
 ```css
-a:hover {
-  color: red;
-}
+a:hover {}
 ```
-#### Pseudo-elements
+### Pseudo-elements
+> A CSS pseudo-element is used to style specified parts of an element.
 ```css
-p::first-line {
-  color: red;
-}
+p::first-line {}
 ```
-#### Combinators
+### Combinators
+> Combinators are used to combine multiple selectors into more specific selectors.
 ```css
-div p {
-  color: red;
-}
+div p {}
 ```
-#### Multiple Selectors
+### Multiple Selectors
 ```css
-h1, h2, p {
-  color: red;
-}
+h1, h2, p {}
 ```
-#### CSS Comments
+## CSS Comments
 ```css
 /* This is a single-line comment */
 ```
-```css
+
