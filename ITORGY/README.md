@@ -1,21 +1,22 @@
-# ICT Positie en landschap
+# IT ORG LINGO
+## ICT Positie en landschap
 | Term | Betekenis |
 | ---    | ---    |
 | BPMN | Business processmodelling, visuele voorstelling van een proces |
-| CMS | Content Management System (vbMS Sharepoint) |
 | Corebusiness | Kernactiviteit van een bedrijf. |
 | Corp(orate) | Moederbedrijf van een multinational. |
+| Future-proof | Ontworpen om ook in de toekomst van dienst te kunnen zijn. |
+| On-Premise | Fysiek aanwezig in het bedrijf. In tegenstelling tot "in thecloud". |
+| Semi-automatisch | Gedeeltelijk geautomatiseerd |
+| Embedded software | Software geprogrammeerd voor andere toestellen dan computers/laptops (vbTV, digibox, smartphone, ...) |
+| (Business) Platform | Software systeem dat ontworpen is om met minimale inspanning aangepast te worden aan de noden van het bedrijf. vbSharePoint. |
+| CMS | Content Management System (vbMS Sharepoint) |
 | CRM | Customer Relationship Management (vb MS Dynamics 365, Salesforce) |
 | DMS | Document Management System (vbMS Sharepoint) |
-| Embedded software | Software geprogrammeerd voor andere toestellen dan computers/laptops (vbTV, digibox, smartphone, ...) |
 | ERP | Enterprise Resource Planning (vbSAP) |
-| Future-proof | Ontworpen om ook in de toekomst van dienst te kunnen zijn. |
 | LMS | Learning Management System (vb BlackBoard) |
-| On-Premise | Fysiek aanwezig in het bedrijf. In tegenstelling tot "in thecloud". |
-| (Business) Platform | Software systeem dat ontworpen is om met minimale inspanning aangepast te worden aan de noden van het bedrijf. vbSharePoint. |
-| Semi-automatisch | Gedeeltelijk geautomatiseerd |
 
-# Projectmatig werken
+## Projectmatig werken
 | Term 		| Term 				| Term 					| Betekenis |
 | --- 		| --- 				| --- 					| ---  |
 | scope 	|     				|     					| De grenzen van een project. |
@@ -57,7 +58,35 @@
 |     		|     				| Project kickoff meeting | De start van het project. |
 |     		| project team 		|     					| De personen die het project uitvoeren. |
 
+## Waterval / Agile / SCRUM
 
+| Term 		| Term 				| Betekenis |
+| --- 		| --- 				| --- |
+| Waterval 	| 					| Een projectmethode waarbij de verschillende fases na elkaar worden uitgevoerd. |
+|			| Analysis 			| De analyse van een project. |
+|			| Design 			| Het ontwerp van een project. |
+|			| Implementation 	| De implementatie van een project. |
+|			| Testing 			| De testen van een project. |
+|			| Maintenance 		| Het onderhoud van een project. |
+| Agile 	| 					| Een projectmethode waarbij de verschillende fases na elkaar worden uitgevoerd. |
+|        	| Self-organizing teams | De teams die zichzelf organiseren. |
+|        	| Iterative 			| De iteratieve aanpak van een project. |
+|        	| Incremental 		| De incrementele aanpak van een project. |
+|        	| Adaptive 			| De adaptieve aanpak van een project. |
+| SCRUM 	| 					| Een projectmethode waarbij de verschillende fases na elkaar worden uitgevoerd. |
+|        	| Sprint 			| De sprint van een project. |
+|        	| Sprint planning 	| De planning van een sprint. |
+|        	| Daily standup		| De dagelijkse standup van een sprint. |
+|        	| Sprint review 		| De review van een sprint. |
+|        	| Sprint retrospective | De retrospective van een sprint. |
+|        	| Product backlog 	| De product backlog van een project. |
+|        	| Sprint backlog 	| De sprint backlog van een project. |
+|        	| Burndown chart 	| De burndown chart van een project. |
+|        	| Scrum master 		| De scrum master van een project. |
+|        	| Product owner 		| De product owner van een project. |
+|        	| Development team 	| Het development team van een project. |
+
+##
 
 
 
