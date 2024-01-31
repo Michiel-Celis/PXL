@@ -1,5 +1,5 @@
 # SQL Oefeningen
-# Table of Contents
+
 1 - [Introductie en installatie SQL Server](#1---Introductie-&-installatie-SQL-Server)
 
 2 - [SQL basisbegrippen](#2---SQL-basisbegrippen)
