@@ -1060,7 +1060,6 @@ ORDER BY afd, functie
 
 ⚠ Een __UNION__ werkt enkel als de tabellen __dezelfde kolommen__ hebben
 
-⚠ 
 
 1. Geef een lijst van de medewerkersnamen en de afdelingsnamen.
 ```sql
