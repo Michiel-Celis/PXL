@@ -816,8 +816,6 @@ ORDER BY deelnemer, chef, afdeling, cursus, docent
 ## 9 - Groepsfuncties
 ⚠ 'Per' of 'Tel' wijzen op een groepsfunctie
 
-⚠ 
-
 
 1. Geef het aantal medewerkers per afdeling.
 ```sql
