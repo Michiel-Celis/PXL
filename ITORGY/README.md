@@ -76,6 +76,7 @@
 | SCRUM 	| 					| Een projectmethode waarbij de verschillende fases na elkaar worden uitgevoerd. |
 |        	| Sprint 			| De sprint van een project. |
 |        	| Sprint planning 	| De planning van een sprint. |
+| 	  		| Sprint backlog 	| De sprint backlog van een sprint. |
 |        	| Daily standup		| De dagelijkse standup van een sprint. |
 |        	| Sprint review 		| De review van een sprint. |
 |        	| Sprint retrospective | De retrospective van een sprint. |
@@ -86,7 +87,10 @@
 |        	| Product owner 		| De product owner van een project. |
 |        	| Development team 	| Het development team van een project. |
 
-##
+## ITIL
+| Term | Betekenis |
+| ---    | ---    |
+
 
 
 
